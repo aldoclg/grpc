@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package greeting.v1;
+
+option go_package = "github.com/aldoclg/grpc/package/proto/v1;greeting_v1";
+
+import "message.proto";
+
+service GreeterService {
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
+
+message GreetRequest {
+  greet.v1.Greet msg = 1;
+}
+
+message GreetResponse {
+  string resp = 1;
+}

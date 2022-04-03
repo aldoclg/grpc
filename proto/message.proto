@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package greet.v1;
+
+option go_package = "github.com/aldoclg/grpc/package/proto/v1/message;greet_v1";
+
+message Greet {
+  enum Greeter {
+    HI = 0;
+    HELLO = 1;
+    MORNING = 2;
+    EVENING = 3;
+  }
+
+  Greeter greeting = 1;
+  string name = 2;
+}
